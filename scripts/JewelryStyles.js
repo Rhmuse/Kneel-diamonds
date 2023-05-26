@@ -3,7 +3,7 @@ import { getStyles } from "./database.js"
 const styles = getStyles()
 
 const buildStyleListItem = (style) => {
-    return `<li>${style.style}</li>\n`
+    return `<li><input type="radio" name="style" value="${style.id}" />${style.style}</li>\n`
 }
 
 document.addEventListener(
