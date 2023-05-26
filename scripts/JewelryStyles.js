@@ -10,7 +10,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "style") {
-            setStyle(event.target.value);
+            setStyle(parseInt(event.target.value));
         }
     }
 )

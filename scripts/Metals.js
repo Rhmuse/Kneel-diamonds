@@ -6,7 +6,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "metal") {
-            setMetal(event.target.value);
+            setMetal(parseInt(event.target.value));
         }
     }
 )
