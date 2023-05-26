@@ -1,4 +1,4 @@
-import { getStyles } from "./database.js"
+import { getStyles, setStyle } from "./database.js"
 
 const styles = getStyles()
 
@@ -9,6 +9,9 @@ const buildStyleListItem = (style) => {
 document.addEventListener(
     "change",
     (event) => {
+        if (event.target.name === "style") {
+            setStyle(event.target.value);
+        }
     }
 )
 
