@@ -8,9 +8,7 @@ import { addCustomOrder } from './database.js'
 document.addEventListener(
     "click",
     (event) => {
-        if (event.target.id === "orderButton") {
-            addCustomOrder();
-        }
+        if (event.target.id === "orderButton") addCustomOrder();
     }
 )
 

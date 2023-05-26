@@ -6,7 +6,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "size") {
-            setSize(event.target.value);
+            setSize(parseInt(event.target.value));
         }
     }
 )
