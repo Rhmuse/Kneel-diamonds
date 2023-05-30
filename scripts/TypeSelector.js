@@ -8,7 +8,7 @@ document.addEventListener(
 )
 
 export const TypeSelector = () => {
-    let html = "<ul>\n"
+    let html = "<ul class=\"choices\" id=\"typeSelector\">\n"
     const types = getTypes();
 
     for (const type of types) {
