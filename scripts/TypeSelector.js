@@ -1,4 +1,4 @@
-import { getTypes, setType } from './database.js'
+import { getTypes, setType, getOrderBuilder } from './database.js'
 
 document.addEventListener(
     "change",
@@ -8,12 +8,17 @@ document.addEventListener(
 )
 
 export const TypeSelector = () => {
+    const isSelected = (type) => {
+        const curentOrder = getOrderBuilder();
+        if (curentOrder.typeId === type.id) return "checked"
+    }
+
     let html = "<ul class=\"choices\" id=\"typeSelector\">\n"
     const types = getTypes();
 
     for (const type of types) {
         html += `<li>
-            <input type="radio" name="type" value="${type.id}" /> ${type.type}
+            <input type="radio" name="type" value="${type.id}" ${isSelected(type)}/> ${type.type}
         </li>\n`
     }
 
